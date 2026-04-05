@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation — Anjel weds Sagun</title>
+  <link rel="stylesheet" href="couple.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="petals-wrap" aria-hidden="true">
+    <span class="petal p1">🌸</span><span class="petal p2">🌺</span>
+    <span class="petal p3">✦</span><span class="petal p4">🌼</span>
+    <span class="petal p5">🌸</span><span class="petal p6">✦</span>
+    <span class="petal p7">🌺</span><span class="petal p8">🌸</span>
+  </div>
+
+  <div id="sprinkleCanvas" aria-hidden="true"></div>
+
+  <div class="name-screen" id="nameScreen">
+    <div class="ns-card">
+      <div class="ns-om-wrap"><span class="ns-om">ॐ</span></div>
+      <div class="ns-deco">❧ &nbsp; ✦ &nbsp; ❧</div>
+      <div class="ns-rose">🌹</div>
+      <h1 class="ns-title">Anjel weds Sagun</h1>
+      <p class="ns-date">June 23, 2026 &nbsp;•&nbsp; Asar 9, 2083 BS</p>
+      <div class="ns-rule">⸻ ✦ ⸻</div>
+      <p class="ns-prompt">Please enter your name so we may<br/>address your personal invitation</p>
+      <input type="text" id="guestInput" class="ns-input" placeholder="Your full name…" maxlength="50" autocomplete="off" />
+      <p class="ns-side-label">तपाईं कुन पक्षबाट हुनुहुन्छ? — Which side?</p>
+      <div class="ns-side-btns">
+        <button class="ns-side-btn" id="groomSideBtn">बेहुला पट्टिको<br/><span>Groom's Side</span></button>
+        <button class="ns-side-btn" id="brideSideBtn">बेहुली पट्टिको<br/><span>Bride's Side</span></button>
+      </div>
+      <button id="guestSubmitBtn" class="ns-btn">Open My Invitation &nbsp;✦</button>
+      <div class="ns-deco" style="margin-top:18px;">❧ &nbsp; ✦ &nbsp; ❧</div>
+    </div>
+  </div>
+
+  <main class="scene" id="mainScene">
+    <section class="invitation-wrapper">
+      <div class="invitation-book" id="invitationBook">
+
+        <div class="page cover-page">
+          <div class="flower-corner fc-tl" aria-hidden="true"></div>
+          <div class="flower-corner fc-tr" aria-hidden="true"></div>
+          <div class="flower-corner fc-bl" aria-hidden="true"></div>
+          <div class="flower-corner fc-br" aria-hidden="true"></div>
+          <div class="diya-corner dc-tl" aria-hidden="true">🪔</div>
+          <div class="diya-corner dc-tr" aria-hidden="true">🪔</div>
+          <div class="diya-corner dc-bl" aria-hidden="true">🪔</div>
+          <div class="diya-corner dc-br" aria-hidden="true">🪔</div>
+          <div class="ornate-frame"></div>
+          <span class="c-corner tl">✦</span>
+          <span class="c-corner tr">✦</span>
+          <span class="c-corner bl">✦</span>
+          <span class="c-corner br">✦</span>
+          <div class="glow-om-wrap" aria-hidden="true"><span class="glow-om">ॐ</span></div>
+
+          <div class="cover-content">
+            <p class="np-header">॥ श्री गणेशाय नमः ॥</p>
+            <p class="np-subheader">हार्दिक निमन्त्रणा</p>
+            <p class="together-txt">❧ &nbsp; Together with their families &nbsp; ❧</p>
+            <h1 class="weds-title">Anjel weds Sagun</h1>
+            <p class="subtitle-banner">A Celebration of Love &amp; Union</p>
+            <div class="gold-rule">⸻ &nbsp; 💍 &nbsp; ⸻</div>
+
+            <div class="couple-photos-row">
+              <div class="person-block">
+                <div class="photo-ring" id="photo1Frame" title="Click to upload Anjel's photo">
+                  <img id="photo1Img" src="images/groom.jpg" alt="Anjel" class="person-img" />
+                  <div class="upload-overlay">📷</div>
+                </div>
+                <input type="file" id="photo1Input" accept="image/*" hidden />
+                <p class="person-first">Anjel</p>
+                <p class="person-last">Bhattarai</p>
+              </div>
+
+              <div class="heart-sep"><span class="big-heart">💕</span></div>
+
+              <div class="person-block">
+                <div class="photo-ring" id="photo2Frame" title="Click to upload Sagun's photo">
+                  <img id="photo2Img" src="images/bride.jpg" alt="Sagun" class="person-img" />
+                  <div class="upload-overlay">📷</div>
+                </div>
+                <input type="file" id="photo2Input" accept="image/*" hidden />
+                <p class="person-first">Sagun</p>
+                <p class="person-last">Pokharel</p>
+              </div>
+            </div>
+
+            <div class="date-row">
+              <span class="date-en">June 23, 2026</span>
+              <span class="date-bullet">✦</span>
+              <span class="date-np">Asar 9, 2083 BS</span>
+            </div>
+            <p class="venue-line">Royal Banquet Palace &nbsp;•&nbsp; Mulpani, Kathmandu‑44600</p>
+            <div class="gold-rule" style="margin-top:2px;">❧ &nbsp; ✦ &nbsp; ❧</div>
+
+            <div class="btn-group">
+              <button id="openCardBtn" class="btn-primary">✉ &nbsp;Open Invitation</button>
+              <button id="playMusicBtn" class="btn-secondary">▶ &nbsp;Play Music</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="page inside-page">
+
+          <div class="panel panel-left">
+            <span class="p-corner tl">✦</span>
+            <span class="p-corner bl">✦</span>
+            <p class="panel-deco">❧ &nbsp; ✦ &nbsp; ❧</p>
+            <h2 class="panel-heading">You Are Cordially Invited</h2>
+            <div class="panel-rule">⸻ 🌸 ⸻</div>
+            <p class="dear-line">
+              Dear &nbsp;<span id="guestNameDisplay" class="guest-cursive">Valued Guest</span>,
+            </p>
+            <p class="side-badge" id="sideBadgeDisplay"></p>
+            <p class="invite-body">
+              With hearts overflowing with joy, we warmly request the honour of your presence at the auspicious occasion of our wedding celebration. Your blessings and company will make this beautiful day truly complete and unforgettable for us both.
+            </p>
+            <div class="details-block">
+              <p class="details-heading">✦ &nbsp; Event Details</p>
+              <div class="event-grid">
+                <div class="ev-card accent-burgundy">
+                  <span class="ev-icon">📅</span>
+                  <span class="ev-key">Date</span>
+                  <span class="ev-val">June 23, 2026<br/><em>Asar 9, 2083 BS</em></span>
+                </div>
+                <div class="ev-card accent-green">
+                  <span class="ev-icon">🕔</span>
+                  <span class="ev-key">Time</span>
+                  <span class="ev-val">5:00 PM onwards<br/><em>Reception to follow</em></span>
+                </div>
+                <div class="ev-card ev-wide accent-gold">
+                  <span class="ev-icon">📍</span>
+                  <span class="ev-key">Venue &amp; Address</span>
+                  <span class="ev-val">Royal Banquet Palace<br/>Mulpani, Kageshwori Gokarna<br/>Kathmandu‑44600, Nepal</span>
+                </div>
+              </div>
+            </div>
+            <blockquote class="blessing-quote">
+              "Two souls, one journey — your presence and blessings make our day whole."
+            </blockquote>
+            <div class="left-actions">
+              <button id="closeCardBtn" class="btn-secondary sm">✕ &nbsp;Close</button>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkoQ6EFaNXkgu2rbe3h_xfOTEShKmqMh4yx9UxbcC__8PNOg/viewform?usp=publish-editor" target="_blank" class="btn-primary sm">✉ &nbsp;RSVP — उपस्थितिको जानकारी</a>
+            </div>
+          </div>
+
+          <div class="panel panel-right">
+            <span class="p-corner tr">✦</span>
+            <span class="p-corner br">✦</span>
+            <div class="venue-card">
+              <img src="images/venue.jpg" alt="Wedding Venue" class="venue-img" />
+              <p class="venue-cap">📍 &nbsp;Royal Banquet Palace, Mulpani, Kathmandu</p>
+            </div>
+            <div class="mini-banner">
+              <p class="mini-weds">Anjel weds Sagun</p>
+              <p class="mini-date">June 23, 2026 &nbsp;•&nbsp; Asar 9, 2083 BS</p>
+            </div>
+            <div class="countdown-box">
+              <p class="cd-label">⏳ &nbsp;Counting down to the big day</p>
+              <div class="cd-grid">
+                <div class="cd-unit"><span id="days">--</span><small>Days</small></div>
+                <div class="cd-sep">:</div>
+                <div class="cd-unit"><span id="hours">--</span><small>Hrs</small></div>
+                <div class="cd-sep">:</div>
+                <div class="cd-unit"><span id="minutes">--</span><small>Mins</small></div>
+                <div class="cd-sep">:</div>
+                <div class="cd-unit"><span id="seconds">--</span><small>Secs</small></div>
+              </div>
+            </div>
+            <div class="rsvp-panel">
+              <p class="rsvp-title">🙏 &nbsp;उपस्थितिको जानकारी</p>
+              <p class="rsvp-sub">Will you be joining us? Please let us know!</p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkoQ6EFaNXkgu2rbe3h_xfOTEShKmqMh4yx9UxbcC__8PNOg/viewform?usp=publish-editor" target="_blank" class="btn-primary rsvp-big-btn">✉ &nbsp;RSVP Now &nbsp;✦</a>
+            </div>
+            <div class="floral-strip">🌸 &nbsp; 🌺 &nbsp; 🌼 &nbsp; 🌸 &nbsp; 🌺 &nbsp; 🌼 &nbsp; 🌸</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="bgMusic" loop autoplay>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
